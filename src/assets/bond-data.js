@@ -22,7 +22,7 @@ window.BondData = {
             'year': 1964,
             'actor': 'Sean Connery',
             'director': 'Guy Hamilton',
-            'poster': ''
+            'poster': 'https://upload.wikimedia.org/wikipedia/en/9/9a/Goldfinger_-_UK_cinema_poster.jpg'
         }, 
         {
             'id': 'bf4',
@@ -30,7 +30,7 @@ window.BondData = {
             'year': 1965,
             'actor': 'Sean Connery',
             'director': 'Terence Young',
-            'poster': ''
+            'poster': 'https://upload.wikimedia.org/wikipedia/en/1/1f/Thunderball_-_UK_cinema_poster.jpg'
         },
         {
             'id': 'bf5',
@@ -38,7 +38,7 @@ window.BondData = {
             'year': 1967,
             'actor': 'Sean Connery',
             'director': 'Lewis Gilbert',
-            'poster': ''
+            'poster': 'https://upload.wikimedia.org/wikipedia/en/3/32/You_Only_Live_Twice_-_UK_cinema_poster.jpg'
         },
         {
             'id': 'bf6',
@@ -46,7 +46,7 @@ window.BondData = {
             'year': 1969,
             'actor': 'George Lazenby',
             'director': 'Peter R. Hunt',
-            'poster': ''
+            'poster': 'https://upload.wikimedia.org/wikipedia/en/f/f3/On_Her_Majesty%27s_Secret_Service_-_UK_cinema_poster.jpg'
         },        
         {
             'id': 'bf7',
@@ -54,7 +54,7 @@ window.BondData = {
             'year': 1971,
             'actor': 'Sean Connery',
             'director': 'Guy Hamilton',
-            'poster': ''
+            'poster': 'https://upload.wikimedia.org/wikipedia/en/7/77/Diamonds_Are_Forever_-_UK_cinema_poster.jpg'
         },
         {
             'id': 'bf8',
@@ -62,7 +62,7 @@ window.BondData = {
             'year': 1973,
             'actor': 'Roger Moore',
             'director': 'Guy Hamilton',
-            'poster': ''
+            'poster': 'https://upload.wikimedia.org/wikipedia/en/3/36/Live_and_Let_Die-_UK_cinema_poster.jpg'
         },
         {
             'id': 'bf9',
@@ -70,7 +70,7 @@ window.BondData = {
             'year': 1974,
             'actor': 'Roger Moore',
             'director': 'Guy Hamilton',
-            'poster': ''
+            'poster': 'https://upload.wikimedia.org/wikipedia/en/0/0c/The_Man_with_the_Golden_Gun_-_UK_cinema_poster.jpg'
         },
         {
             'id': 'bf10',
@@ -78,7 +78,7 @@ window.BondData = {
             'year': 1977,
             'actor': 'Roger Moore',
             'director': 'Lewis Gilbert',
-            'poster': ''
+            'poster': 'https://upload.wikimedia.org/wikipedia/en/d/d7/The_Spy_Who_Loved_Me_%28UK_cinema_poster%29.jpg'
         },
         {
             'id': 'bf11',
@@ -86,7 +86,7 @@ window.BondData = {
             'year': 1979,
             'actor': 'Roger Moore',
             'director': 'Lewis Gilbert',
-            'poster': ''
+            'poster': 'https://upload.wikimedia.org/wikipedia/en/6/66/Moonraker_%28UK_cinema_poster%29.jpg'
         },
         {
             'id': 'bf12',
@@ -94,7 +94,7 @@ window.BondData = {
             'year': 1981,
             'actor': 'Roger Moore',
             'director': 'John Glen',
-            'poster': ''
+            'poster': 'https://upload.wikimedia.org/wikipedia/en/c/cd/For_Your_Eyes_Only_-_UK_cinema_poster.jpg'
         },                        
         {
             'id': 'bf13',
@@ -102,7 +102,7 @@ window.BondData = {
             'year': 1983,
             'actor': 'Roger Moore',
             'director': 'John Glen',
-            'poster': ''
+            'poster': 'https://upload.wikimedia.org/wikipedia/en/b/b2/Octopussy_-_UK_cinema_poster.jpg'
         }, 
         {
             'id': 'bf14',
@@ -110,7 +110,7 @@ window.BondData = {
             'year': 1985,
             'actor': 'Roger Moore',
             'director': 'John Glen',
-            'poster': ''
+            'poster': 'https://upload.wikimedia.org/wikipedia/en/0/03/A_View_to_a_Kill_-_UK_cinema_poster.jpg'
         },                 
         {
             'id': 'bf15',
@@ -118,7 +118,7 @@ window.BondData = {
             'year': 1987,
             'actor': 'Timothy Dalton',
             'director': 'John Glen',
-            'poster': ''
+            'poster': 'https://upload.wikimedia.org/wikipedia/en/a/ae/The_Living_Daylights_-_UK_cinema_poster.jpg'
         }, 
         {
             'id': 'bf16',
@@ -126,7 +126,7 @@ window.BondData = {
             'year': 1989,
             'actor': 'Timothy Dalton',
             'director': 'John Glen',
-            'poster': ''
+            'poster': 'https://upload.wikimedia.org/wikipedia/en/c/c2/Licence_to_Kill_-_UK_cinema_poster.jpg'
         },         
         {
             'id': 'bf17',
@@ -134,7 +134,7 @@ window.BondData = {
             'year': 1995,
             'actor': 'Pierce Brosnan',
             'director': 'Martin Campbell',
-            'poster': ''
+            'poster': 'https://upload.wikimedia.org/wikipedia/en/2/24/GoldenEye_-_UK_cinema_poster.jpg'
         },
         {
             'id': 'bf18',
@@ -142,7 +142,7 @@ window.BondData = {
             'year': 1997,
             'actor': 'Pierce Brosnan',
             'director': 'Roger Spottiswoode',
-            'poster': ''
+            'poster': 'https://upload.wikimedia.org/wikipedia/en/b/b3/Tomorrow_Never_Dies_%28UK_cinema_poster%29.jpg'
         },
         {
             'id': 'bf19',
@@ -150,7 +150,7 @@ window.BondData = {
             'year': 1999,
             'actor': 'Pierce Brosnan',
             'director': 'Michael Apted',
-            'poster': ''
+            'poster': 'https://upload.wikimedia.org/wikipedia/en/0/0c/The_World_Is_Not_Enough_%28UK_cinema_poster%29.jpg'
         },
         {
             'id': 'bf20',
@@ -158,7 +158,7 @@ window.BondData = {
             'year': 2002,
             'actor': 'Pierce Brosnan',
             'director': 'Lee Tamahori',
-            'poster': ''
+            'poster': 'https://upload.wikimedia.org/wikipedia/en/3/3d/Die_another_Day_-_UK_cinema_poster.jpg'
         },                
         {
             'id': 'bf21',
@@ -166,7 +166,7 @@ window.BondData = {
             'year': 2006,
             'actor': 'Daniel Craig',
             'director': 'Martin Campbell',
-            'poster': ''
+            'poster': 'https://upload.wikimedia.org/wikipedia/en/1/15/Casino_Royale_2_-_UK_cinema_poster.jpg'
         }, 
         {
             'id': 'bf22',
@@ -174,7 +174,7 @@ window.BondData = {
             'year': 2008,
             'actor': 'Daniel Craig',
             'director': 'Marc Forster',
-            'poster': ''
+            'poster': 'https://upload.wikimedia.org/wikipedia/en/2/2d/Quantum_of_Solace_-_UK_cinema_poster.jpg'
         },
         {
             'id': 'bf23',
@@ -182,7 +182,7 @@ window.BondData = {
             'year': 2012,
             'actor': 'Daniel Craig',
             'director': 'Sam Mendes',
-            'poster': ''
+            'poster': 'https://upload.wikimedia.org/wikipedia/en/a/a7/Skyfall_poster.jpg'
         },
         {
             'id': 'bf24',
@@ -190,7 +190,7 @@ window.BondData = {
             'year': 2015,
             'actor': 'Daniel Craig',
             'director': 'Sam Mendes',
-            'poster': ''
+            'poster': 'https://upload.wikimedia.org/wikipedia/en/c/c3/Spectre_poster.jpg'
         }                
     ],
     'actors': [
@@ -217,6 +217,52 @@ window.BondData = {
         {
             'display': 'Daniel Craig',
             'key': 'craig'
+        }
+    ],
+    'directors': [
+        {
+            'display': 'Terence Young',
+            'key': 'young'
+        },
+        {
+            'display': 'Guy Hamilton',
+            'key': 'hamilton'
+        },
+        {
+            'display': 'Lewis Gilbert',
+            'key': 'gilbert'
+        },
+        {
+            'display': 'Peter R. Hunt',
+            'key': 'hunt'
+        },                       
+        {
+            'display': 'John Glen',
+            'key': 'glen'
+        },                        
+        {
+            'display': 'Martin Campbell',
+            'key': 'campbell'
+        },                        
+        {
+            'display': 'Roger Spottiswoode',
+            'key': 'spottiswoode'
+        },                        
+        {
+            'display': 'Michael Apted',
+            'key': 'apted'
+        },                        
+        {
+            'display': 'Lee Tamahori',
+            'key': 'tamahori'
+        },                        
+        {
+            'display': 'Marc Forster',
+            'key': 'forster'
+        },                        
+        {
+            'display': 'Sam Mendes',
+            'key': 'mendes'
         }
     ]
 };
