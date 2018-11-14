@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Grid from 'react-bootstrap/lib/Grid';
 import Row from 'react-bootstrap/lib/Row';
 import Col from 'react-bootstrap/lib/Col';
 import './FilmsList.css';
@@ -16,19 +15,48 @@ function Films(props) {
     );
 }
 
-function Film(props) {
-    var imgSrc = 'https://dummyimage.com/360x275/fff/aaa';
+class Film extends Component {
+    constructor(props) {
+        super(props);
+       
+        this.state = {
+            hover: false,
+            title: props.film.title,
+            poster: (props.film.poster !== '') ? props.film.poster : 'https://dummyimage.com/360x275/fff/aaa' 
+        };
+    /*
+    var isActive = false,
+    imgSrc = 'https://dummyimage.com/360x275/fff/aaa';
     
     if (props.film.poster !== '') {
         imgSrc = props.film.poster;   
     }
+    */        
+        //this.updateFormState = this.updateFormState.bind(this);
+    }     
+//function Film(props) {
+
     
-    return (
-        <Col xs={12} md={3} className="film">
-            {props.film.title}
-            <img src={imgSrc} alt={props.film.title} />
-        </Col>
-    );
+    showDetails(evt) {
+
+console.log('showDetails');            
+        
+    }
+
+    hideDetails(evt) {
+
+console.log('hideDetails');        
+    }
+    
+    render() {
+        return (
+            <Col xs={12} md={3} className="film">
+                {this.state.title}
+                <img src={this.state.poster} alt={this.state.title} />
+            </Col>
+        );
+    }
+//}
 }
 
 function FilmFilters(props) {
