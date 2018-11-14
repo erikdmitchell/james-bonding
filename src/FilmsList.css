@@ -1,3 +1,7 @@
+.films {
+    display: flex;
+    flex-wrap: wrap;
+}
 .films .film {
     margin-bottom: 15px;
     position: relative;
