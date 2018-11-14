@@ -39,8 +39,8 @@ class Film extends Component {
     
     render() {
         return (
-            <Col xs={12} md={3} className="film">
-                <img src={this.state.poster} alt={this.state.title} onMouseOver={this.mouseOver} onMouseOut={this.mouseOut} />
+            <Col xs={12} md={3} className="film" onMouseEnter={this.mouseOver} onMouseLeave={this.mouseOut}>
+                <img src={this.state.poster} alt={this.state.title} />
                 {this.state.hover ? (<FilmDetails film={this.state.film} />) : null}
             </Col>
         );
@@ -49,12 +49,14 @@ class Film extends Component {
 
 function FilmDetails(props) { 
     return (
-        <div className="film-details">
-            <div className="film-title">{props.film.title}</div>
-            <div className="film-year">{props.film.year}</div>
-            <div className="film-actor">{props.film.actor}</div>  
-            <div className="film-director">{props.film.director}</div>
-        </div>    
+        <Col xs={12} className="film-details">
+            <div class="film-details-inner">
+                <div className="film-title"><h3>{props.film.title}</h3></div>
+                <div className="film-year">Year: {props.film.year}</div>
+                <div className="film-actor">Actor: {props.film.actor}</div>  
+                <div className="film-director">Director: {props.film.director}</div>
+            </div>
+        </Col>    
     );
 }
 
