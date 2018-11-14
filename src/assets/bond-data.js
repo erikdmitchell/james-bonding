@@ -264,5 +264,127 @@ window.BondData = {
             'display': 'Sam Mendes',
             'key': 'mendes'
         }
+    ],
+    'villans': [
+        {
+            'name': 'Dr. Julius No',
+            'films': ['bf1']
+        },
+        {
+            'name': 'Colonel Rosa Klebb',
+            'films': ['bf2']
+        },
+        {
+            'name': 'Ernst Stavro Blofeld',
+            'films': ['bf2']
+        },
+        {
+            'name': 'Auric Goldfinger',
+            'films': ['bf3']
+        },
+        {
+            'name': 'Emilio Largo',
+            'films': ['bf4']
+        },        
+        {
+            'name': 'Ernst Stavro Blofeld',
+            'films': ['bf4', 'bf5', 'bf6', 'bf7', 'bf24']
+        },                 
+        {
+            'name': 'Dr. Kananga',
+            'films': ['bf8']
+        },
+        {
+            'name': 'Mr. Big',
+            'films': ['bf8']
+        },        
+        {
+            'name': 'Francisco Scaramanga',
+            'films': ['bf9']
+        },
+        {
+            'name': 'Karl Stromberg',
+            'films': ['bf10']
+        },
+        {
+            'name': 'Hugo Drax',
+            'films': ['bf11']
+        },        
+        {
+            'name': 'Aristotle Kristatos',
+            'films': ['bf12']
+        },
+        {
+            'name': 'General Orlov',
+            'films': ['bf13']
+        },
+        {
+            'name': 'Prince Kamal Khan',
+            'films': ['bf13']
+        },
+        {
+            'name': 'Max Zorin',
+            'films': ['bf14']
+        },
+        {
+            'name': 'General Georgi Koskov',
+            'films': ['bf15']
+        },                                
+        {
+            'name': 'Brad Whitaker',
+            'films': ['bf15']
+        },
+        {
+            'name': 'Franz Sanchez',
+            'films': ['bf16']
+        },
+        {
+            'name': 'Alec Trevelyan',
+            'films': ['bf17']
+        },
+        {
+            'name': 'Elliot Carver',
+            'films': ['bf18']
+        },                
+        {
+            'name': 'Elektra King',
+            'films': ['bf19']
+        }, 
+        {
+            'name': 'Victor \'Renard\' Zokas',
+            'films': ['bf19']
+        },         
+        {
+            'name': 'Gustav Graves',
+            'films': ['bf20']
+        }, 
+        {
+            'name': 'Colonel Moon',
+            'films': ['bf20']
+        }, 
+        {
+            'name': 'Le Chiffre',
+            'films': ['bf21']
+        },
+        {
+            'name': 'Mr. White',
+            'films': ['bf21', 'bf22']
+        },
+        {
+            'name': 'Dominic Greene',
+            'films': ['bf22']
+        },        
+        {
+            'name': 'Tiago \'Raoul Silva\' Rodriguez',
+            'films': ['bf23']
+        }, 
+        {
+            'name': 'Franz Oberhauser',
+            'films': ['bf24']
+        },
+        {
+            'name': 'Max Denbigh/C',
+            'films': ['bf24']
+        }, 
     ]
 };
