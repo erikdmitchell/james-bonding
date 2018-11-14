@@ -267,124 +267,149 @@ window.BondData = {
     ],
     'villans': [
         {
-            'name': 'Dr. Julius No',
-            'films': ['bf1']
+            'display': 'Dr. Julius No',
+            'films': ['bf1'],
+            'key': 'no'
         },
         {
-            'name': 'Colonel Rosa Klebb',
-            'films': ['bf2']
+            'display': 'Colonel Rosa Klebb',
+            'films': ['bf2'],
+            'key': 'klebb'
         },
         {
-            'name': 'Ernst Stavro Blofeld',
-            'films': ['bf2']
+            'display': 'Auric Goldfinger',
+            'films': ['bf3'],
+            'key': 'goldfinger'
         },
         {
-            'name': 'Auric Goldfinger',
-            'films': ['bf3']
-        },
-        {
-            'name': 'Emilio Largo',
-            'films': ['bf4']
+            'display': 'Emilio Largo',
+            'films': ['bf4'],
+            'key': 'largo'
         },        
         {
-            'name': 'Ernst Stavro Blofeld',
-            'films': ['bf4', 'bf5', 'bf6', 'bf7', 'bf24']
+            'display': 'Ernst Stavro Blofeld',
+            'films': ['bf2', 'bf4', 'bf5', 'bf6', 'bf7', 'bf24'],
+            'key': 'blofed'
         },                 
         {
-            'name': 'Dr. Kananga',
-            'films': ['bf8']
+            'display': 'Dr. Kananga',
+            'films': ['bf8'],
+            'key': 'kananga'
         },
         {
-            'name': 'Mr. Big',
-            'films': ['bf8']
+            'display': 'Mr. Big',
+            'films': ['bf8'],
+            'key': 'big'
         },        
         {
-            'name': 'Francisco Scaramanga',
-            'films': ['bf9']
+            'display': 'Francisco Scaramanga',
+            'films': ['bf9'],
+            'key': 'scaramanga'
         },
         {
-            'name': 'Karl Stromberg',
-            'films': ['bf10']
+            'display': 'Karl Stromberg',
+            'films': ['bf10'],
+            'key': 'stromberg'
         },
         {
-            'name': 'Hugo Drax',
-            'films': ['bf11']
+            'display': 'Hugo Drax',
+            'films': ['bf11'],
+            'key': 'drax'
         },        
         {
-            'name': 'Aristotle Kristatos',
-            'films': ['bf12']
+            'display': 'Aristotle Kristatos',
+            'films': ['bf12'],
+            'key': 'kristatos'
         },
         {
-            'name': 'General Orlov',
-            'films': ['bf13']
+            'display': 'General Orlov',
+            'films': ['bf13'],
+            'key': 'orlov'
         },
         {
-            'name': 'Prince Kamal Khan',
-            'films': ['bf13']
+            'display': 'Prince Kamal Khan',
+            'films': ['bf13'],
+            'key': 'khan'
         },
         {
-            'name': 'Max Zorin',
-            'films': ['bf14']
+            'display': 'Max Zorin',
+            'films': ['bf14'],
+            'key': 'zorin'
         },
         {
-            'name': 'General Georgi Koskov',
-            'films': ['bf15']
+            'display': 'General Georgi Koskov',
+            'films': ['bf15'],
+            'key': 'koskov'
         },                                
         {
-            'name': 'Brad Whitaker',
-            'films': ['bf15']
+            'display': 'Brad Whitaker',
+            'films': ['bf15'],
+            'key': 'whitaker'
         },
         {
-            'name': 'Franz Sanchez',
-            'films': ['bf16']
+            'display': 'Franz Sanchez',
+            'films': ['bf16'],
+            'key': 'sanchez'
         },
         {
-            'name': 'Alec Trevelyan',
-            'films': ['bf17']
+            'display': 'Alec Trevelyan',
+            'films': ['bf17'],
+            'key': 'trevelyan'
         },
         {
-            'name': 'Elliot Carver',
-            'films': ['bf18']
+            'display': 'Elliot Carver',
+            'films': ['bf18'],
+            'key': 'carver'
         },                
         {
-            'name': 'Elektra King',
-            'films': ['bf19']
+            'display': 'Elektra King',
+            'films': ['bf19'],
+            'key': 'king'
         }, 
         {
-            'name': 'Victor \'Renard\' Zokas',
-            'films': ['bf19']
+            'display': 'Victor \'Renard\' Zokas',
+            'films': ['bf19'],
+            'key': 'zokas'
         },         
         {
-            'name': 'Gustav Graves',
-            'films': ['bf20']
+            'display': 'Gustav Graves',
+            'films': ['bf20'],
+            'key': 'graves'
         }, 
         {
-            'name': 'Colonel Moon',
-            'films': ['bf20']
+            'display': 'Colonel Moon',
+            'films': ['bf20'],
+            'key': 'moon'
         }, 
         {
-            'name': 'Le Chiffre',
-            'films': ['bf21']
+            'display': 'Le Chiffre',
+            'films': ['bf21'],
+            'key': 'chiffre'
         },
         {
-            'name': 'Mr. White',
-            'films': ['bf21', 'bf22']
+            'display': 'Mr. White',
+            'films': ['bf21', 'bf22'],
+            'key': 'white'
         },
         {
-            'name': 'Dominic Greene',
-            'films': ['bf22']
+            'display': 'Dominic Greene',
+            'films': ['bf22'],
+            'key': 'greene'
         },        
         {
-            'name': 'Tiago \'Raoul Silva\' Rodriguez',
-            'films': ['bf23']
+            'display': 'Tiago \'Raoul Silva\' Rodriguez',
+            'films': ['bf23'],
+            'key': 'rodriguez'
         }, 
         {
-            'name': 'Franz Oberhauser',
-            'films': ['bf24']
+            'display': 'Franz Oberhauser',
+            'films': ['bf24'],
+            'key': 'oberhauser'
         },
         {
-            'name': 'Max Denbigh/C',
-            'films': ['bf24']
+            'display': 'Max Denbigh',
+            'films': ['bf24'],
+            'key': 'denbigh'
         }, 
     ]
 };

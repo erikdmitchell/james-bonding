@@ -63,6 +63,7 @@ function FilmDetails(props) {
 function FilmFilters(props) {
     var actors = window.BondData.actors;
     var directors = window.BondData.directors;
+    var villans = window.BondData.villans;
     
     function updateTitle(evt) {
         props.updateFormState({currentTitle: evt.target.value});   
@@ -76,11 +77,16 @@ function FilmFilters(props) {
         props.updateFormState({currentDirector: evt.target.value});            
     } 
 
+    function updateVillan(evt) {
+        props.updateFormState({currentVillan: evt.target.value});            
+    } 
+
     function resetFilters(evt) {
         props.updateFormState({
             currentTitle: '',
             currentActor: '' ,
-            currentDirector: '' 
+            currentDirector: '',
+            currentVillan: '' 
         });          
     }  
     
@@ -90,6 +96,7 @@ function FilmFilters(props) {
 				<label htmlFor="film-title">Title:</label>
 				<input type="text" name="film_title" value="" placeholder="Film Title" id="film-title" value={props.currentTitle} onChange={updateTitle} />
 			</div>
+			
 			<div className="group">
 				<label htmlFor="film-actor">Actor:</label>
 				<select name="film_actor" id="film-actor" value={props.currentActor} onChange={updateActor}>
@@ -103,6 +110,7 @@ function FilmFilters(props) {
 				    })}
 				</select>
 			</div>
+			
 			<div className="group">
 				<label htmlFor="film-director">Director:</label>
 				<select name="film_director" id="film-director" value={props.currentDirector} onChange={updateDirector}>
@@ -116,6 +124,21 @@ function FilmFilters(props) {
 				    })}
 				</select>
 			</div>
+
+			<div className="group">
+				<label htmlFor="film-villan">Villan:</label>
+				<select name="film_villan" id="film-villan" value={props.currentVillan} onChange={updateVillan}>
+				    <option value="">- Select -</option>
+				    {villans.map(function(villan) {
+    				    return (
+        				    <option value={villan.key} key={villan.key}>
+        				        {villan.display}
+        				    </option>
+    				    );
+				    })}
+				</select>
+			</div>
+			
 			<div className="group">
 				<input type="reset" className="reset" value="Reset" onClick={resetFilters} />
 			</div>
@@ -131,7 +154,8 @@ class FilmsList extends Component {
             films: window.BondData.films,
             currentTitle: '',
             currentActor: '',
-            currentDirector: '', 
+            currentDirector: '',
+            currentVillan: '', 
         };
         
         this.updateFormState = this.updateFormState.bind(this);
@@ -175,7 +199,7 @@ class FilmsList extends Component {
     render() {
         return (
             <div className="films-list">
-                <FilmFilters  currentTitle={this.state.currentTitle} currentActor={this.state.currentActor} currentDirector={this.state.currentDirector} updateFormState={this.updateFormState} />
+                <FilmFilters  currentTitle={this.state.currentTitle} currentActor={this.state.currentActor} currentDirector={this.state.currentDirector} currentVillan={this.state.currentVillan} updateFormState={this.updateFormState} />
                 <Films films={this.state.films} />
             </div>
         );
