@@ -62,6 +62,7 @@ function FilmDetails(props) {
 
 function FilmFilters(props) {
     var actors = window.BondData.actors;
+    var directors = window.BondData.directors;
     
     function updateTitle(evt) {
         props.updateFormState({currentTitle: evt.target.value});   
@@ -71,10 +72,15 @@ function FilmFilters(props) {
         props.updateFormState({currentActor: evt.target.value});            
     }       
 
+    function updateDirector(evt) {
+        props.updateFormState({currentDirector: evt.target.value});            
+    } 
+
     function resetFilters(evt) {
         props.updateFormState({
             currentTitle: '',
-            currentActor: '' 
+            currentActor: '' ,
+            currentDirector: '' 
         });          
     }  
     
@@ -98,6 +104,19 @@ function FilmFilters(props) {
 				</select>
 			</div>
 			<div className="group">
+				<label htmlFor="film-director">Director:</label>
+				<select name="film_director" id="film-director" value={props.currentDirector} onChange={updateDirector}>
+				    <option value="">- Select -</option>
+				    {directors.map(function(director) {
+    				    return (
+        				    <option value={director.key} key={director.key}>
+        				        {director.display}
+        				    </option>
+    				    );
+				    })}
+				</select>
+			</div>
+			<div className="group">
 				<input type="reset" className="reset" value="Reset" onClick={resetFilters} />
 			</div>
         </form>            
@@ -111,7 +130,8 @@ class FilmsList extends Component {
         this.state = {
             films: window.BondData.films,
             currentTitle: '',
-            currentActor: '', 
+            currentActor: '',
+            currentDirector: '', 
         };
         
         this.updateFormState = this.updateFormState.bind(this);
@@ -122,7 +142,8 @@ class FilmsList extends Component {
     }
     
     updateFilmList() {
-        var actor = '';
+        var actor = '',
+        director = '';
         
         for (var i=0; i < window.BondData.actors.length; i++) {
             if (this.state.currentActor === window.BondData.actors[i].key) {
@@ -130,11 +151,19 @@ class FilmsList extends Component {
                 break;
             }           
         }       
+
+        for (var i=0; i < window.BondData.directors.length; i++) {
+            if (this.state.currentDirector === window.BondData.directors[i].key) {
+                director = window.BondData.directors[i].display;
+                break;
+            }           
+        } 
             
         var filteredFilms = window.BondData.films.filter(function(film) {            
             return (
               (this.state.currentTitle === "" || film.title.toLowerCase().indexOf(this.state.currentTitle.toLowerCase()) !== -1) &&
-              (this.state.currentActor === "" || film.actor === actor)
+              (this.state.currentActor === "" || film.actor === actor) &&
+              (this.state.currentDirector === "" || film.director === director)
             );
         }.bind(this));
     
@@ -146,7 +175,7 @@ class FilmsList extends Component {
     render() {
         return (
             <div className="films-list">
-                <FilmFilters  currentTitle={this.state.currentTitle} currentActor={this.state.currentActor} updateFormState={this.updateFormState} />
+                <FilmFilters  currentTitle={this.state.currentTitle} currentActor={this.state.currentActor} currentDirector={this.state.currentDirector} updateFormState={this.updateFormState} />
                 <Films films={this.state.films} />
             </div>
         );
