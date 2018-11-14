@@ -1,0 +1,34 @@
+body {
+    background: #080808;
+    color: #fff;    
+}
+
+h1 {
+    color: #8DA0AB;
+}
+
+h2 {
+    color: #F2F7F7;
+}
+
+.filter {
+    background-color: #ccc;
+    padding: 10px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+.filter .group {
+    float: left;
+    margin-right: 15px;
+}
+.filter .group label {
+    color: #000;
+    margin-right: 10px;
+}
+.filter .group input.reset {
+    color: #000;
+}
+.filter .group input[type="text"],
+.filter .group select {
+    color: #000;
+}
