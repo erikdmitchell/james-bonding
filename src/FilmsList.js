@@ -5,21 +5,14 @@ import Col from 'react-bootstrap/lib/Col';
 import './FilmsList.css';
 
 function Films(props) {    
-    return (
-        <Grid className="films">
-            <Row className="film header-row">
-                <Col xs={12} md={3} className="film-title">Title</Col>
-                <Col xs={12} md={1} className="film-year">Year</Col>
-                <Col xs={12} md={2} className="film-actor">Actor</Col>  
-                <Col xs={12} md={2} className="film-director">Director</Col>                              
-            </Row>
-            
+    return (        
+        <Row className="films">
             {props.films.map(function(film) {
                 return (
                     <Film key={film.id} film={film} />   
                 )
             })}
-        </Grid>  
+        </Row>  
     );
 }
 
@@ -31,13 +24,10 @@ function Film(props) {
     }
     
     return (
-        <Row className="film" id={props.film.id}>
-            <Col xs={12} md={3} className="film-title">{props.film.title}</Col>
-            <Col xs={12} md={1} className="film-year">{props.film.year}</Col>
-            <Col xs={12} md={2} className="film-actor">{props.film.actor}</Col>  
-            <Col xs={12} md={2} className="film-director">{props.film.director}</Col>
+        <Col xs={12} md={3} className="film">
+            {props.film.title}
             <img src={imgSrc} alt={props.film.title} />
-        </Row>  
+        </Col>
     );
 }
 

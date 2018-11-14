@@ -1,10 +1,7 @@
-.films .header-row {
-    font-weight: bold;
+.films .film {
+    margin-bottom: 15px;
 }
-.films .film.row {
-    padding: 2px 0px;
-}
-.films .film.row:nth-child(even) {
-    background: #eee;
-    color: #000;
+.films .film img {
+    max-width: 100%;
+    height: auto;
 }
