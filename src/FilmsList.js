@@ -32,19 +32,20 @@ class Film extends Component {
         imgSrc = props.film.poster;   
     }
     */        
-        //this.updateFormState = this.updateFormState.bind(this);
+        this.mouseOver = this.mouseOver.bind(this);
+        this.mouseOut = this.mouseOut.bind(this);
     }     
 //function Film(props) {
 
     
-    showDetails(evt) {
-
+    mouseOver(evt) {
+        this.setState({hover: true});
 console.log('showDetails');            
         
     }
 
-    hideDetails(evt) {
-
+    mouseOut(evt) {
+    this.setState({hover: false});
 console.log('hideDetails');        
     }
     
@@ -52,7 +53,8 @@ console.log('hideDetails');
         return (
             <Col xs={12} md={3} className="film">
                 {this.state.title}
-                <img src={this.state.poster} alt={this.state.title} />
+                <img src={this.state.poster} alt={this.state.title} onMouseOver={this.mouseOver} onMouseOut={this.mouseOut} />
+                {this.state.hover ? ('HOVER') : null}
             </Col>
         );
     }
