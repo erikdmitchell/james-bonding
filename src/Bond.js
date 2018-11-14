@@ -3,7 +3,6 @@ import './assets/bond-data.js';
 import './Bond.css';
 import Grid from 'react-bootstrap/lib/Grid';
 import Row from 'react-bootstrap/lib/Row';
-import Col from 'react-bootstrap/lib/Col';
 import FilmsList from './FilmsList';
 
 class Bond extends Component {
