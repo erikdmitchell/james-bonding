@@ -24,12 +24,19 @@ function Films(props) {
 }
 
 function Film(props) {
+    var imgSrc = 'https://dummyimage.com/360x275/fff/aaa';
+    
+    if (props.film.poster !== '') {
+        imgSrc = props.film.poster;   
+    }
+    
     return (
         <Row className="film" id={props.film.id}>
             <Col xs={12} md={3} className="film-title">{props.film.title}</Col>
             <Col xs={12} md={1} className="film-year">{props.film.year}</Col>
             <Col xs={12} md={2} className="film-actor">{props.film.actor}</Col>  
             <Col xs={12} md={2} className="film-director">{props.film.director}</Col>
+            <img src={imgSrc} alt={props.film.title} />
         </Row>  
     );
 }
