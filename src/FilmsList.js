@@ -119,7 +119,6 @@ class FilmsList extends Component {
     render() {
         return (
             <div className="films-list">
-                <h2>Films</h2>
                 <FilmFilters  currentTitle={this.state.currentTitle} currentActor={this.state.currentActor} updateFormState={this.updateFormState} />
                 <Films films={this.state.films} />
             </div>
