@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import Grid from 'react-bootstrap/lib/Grid';
 import Row from 'react-bootstrap/lib/Row';
 import Col from 'react-bootstrap/lib/Col';
 import './FilmsList.css';
 
 function Films(props) {    
     return (
-        <div className="films">
+        <Grid className="films">
             <Row className="film header-row">
                 <Col xs={12} md={3} className="film-title">Title</Col>
                 <Col xs={12} md={1} className="film-year">Year</Col>
@@ -18,7 +19,7 @@ function Films(props) {
                     <Film key={film.id} film={film} />   
                 )
             })}
-        </div>  
+        </Grid>  
     );
 }
 
