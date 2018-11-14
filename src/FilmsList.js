@@ -21,44 +21,41 @@ class Film extends Component {
        
         this.state = {
             hover: false,
-            title: props.film.title,
+            film: props.film,
             poster: (props.film.poster !== '') ? props.film.poster : 'https://dummyimage.com/360x275/fff/aaa' 
         };
-    /*
-    var isActive = false,
-    imgSrc = 'https://dummyimage.com/360x275/fff/aaa';
-    
-    if (props.film.poster !== '') {
-        imgSrc = props.film.poster;   
-    }
-    */        
+                
         this.mouseOver = this.mouseOver.bind(this);
         this.mouseOut = this.mouseOut.bind(this);
     }     
-//function Film(props) {
 
-    
     mouseOver(evt) {
         this.setState({hover: true});
-console.log('showDetails');            
-        
     }
 
     mouseOut(evt) {
-    this.setState({hover: false});
-console.log('hideDetails');        
+        this.setState({hover: false});       
     }
     
     render() {
         return (
             <Col xs={12} md={3} className="film">
-                {this.state.title}
                 <img src={this.state.poster} alt={this.state.title} onMouseOver={this.mouseOver} onMouseOut={this.mouseOut} />
-                {this.state.hover ? ('HOVER') : null}
+                {this.state.hover ? (<FilmDetails film={this.state.film} />) : null}
             </Col>
         );
     }
-//}
+}
+
+function FilmDetails(props) { 
+    return (
+        <div className="film-details">
+            <div className="film-title">{props.film.title}</div>
+            <div className="film-year">{props.film.year}</div>
+            <div className="film-actor">{props.film.actor}</div>  
+            <div className="film-director">{props.film.director}</div>
+        </div>    
+    );
 }
 
 function FilmFilters(props) {
