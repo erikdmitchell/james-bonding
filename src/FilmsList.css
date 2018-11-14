@@ -1,3 +1,7 @@
 .films .header-row {
     font-weight: bold;
 }
+.films .film.row:nth-child(even) {
+    background: #eee;
+    color: #000;
+}
