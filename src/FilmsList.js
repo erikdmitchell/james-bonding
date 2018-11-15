@@ -167,7 +167,8 @@ class FilmsList extends Component {
     
     updateFilmList() {
         var actor = '',
-        director = '';
+        director = '',
+        villanFilms = '';
         
         for (var i=0; i < window.BondData.actors.length; i++) {
             if (this.state.currentActor === window.BondData.actors[i].key) {
@@ -183,25 +184,19 @@ class FilmsList extends Component {
             }           
         } 
 
-        var villanFilms = window.BondData.villans.filter(function(villan) {            
-            return (
-                (this.state.currentVillan === "" || this.state.currentVillan === villan.key)
-            );
-        }.bind(this));
+        for (var v=0; v<window.BondData.villans.length; v++) {
+            if (this.state.currentVillan === window.BondData.villans[v].key) {
+                villanFilms = window.BondData.villans[v].films; 
+                break;
+            }
+        }
 
- console.log(villanFilms); 
- 
-        var foo = window.BondData.villans.reduce(function(acc, villan) {
-            return (
-                (this.state.currentVillan === "" || this.state.currentVillan === villan.key)
-            );                
-        }.bind(this), '');
-console.log(foo);           
         var filteredFilms = window.BondData.films.filter(function(film) {            
             return (
               (this.state.currentTitle === "" || film.title.toLowerCase().indexOf(this.state.currentTitle.toLowerCase()) !== -1) &&
               (this.state.currentActor === "" || film.actor === actor) &&
-              (this.state.currentDirector === "" || film.director === director)
+              (this.state.currentDirector === "" || film.director === director) &&
+              (this.state.currentVillan === "" || villanFilms.indexOf(film.id) !== -1)
             );
         }.bind(this));
     
