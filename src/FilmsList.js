@@ -50,7 +50,7 @@ class Film extends Component {
 function FilmDetails(props) { 
     return (
         <Col xs={12} className="film-details">
-            <div class="film-details-inner">
+            <div className="film-details-inner">
                 <div className="film-title"><h3>{props.film.title}</h3></div>
                 <div className="film-year">Year: {props.film.year}</div>
                 <div className="film-actor">Actor: {props.film.actor}</div>  
@@ -176,13 +176,27 @@ class FilmsList extends Component {
             }           
         }       
 
-        for (var i=0; i < window.BondData.directors.length; i++) {
-            if (this.state.currentDirector === window.BondData.directors[i].key) {
-                director = window.BondData.directors[i].display;
+        for (var d=0; d < window.BondData.directors.length; d++) {
+            if (this.state.currentDirector === window.BondData.directors[d].key) {
+                director = window.BondData.directors[d].display;
                 break;
             }           
         } 
-            
+
+        var villanFilms = window.BondData.villans.filter(function(villan) {            
+            return (
+                (this.state.currentVillan === "" || this.state.currentVillan === villan.key)
+            );
+        }.bind(this));
+
+ console.log(villanFilms); 
+ 
+        var foo = window.BondData.villans.reduce(function(acc, villan) {
+            return (
+                (this.state.currentVillan === "" || this.state.currentVillan === villan.key)
+            );                
+        }.bind(this), '');
+console.log(foo);           
         var filteredFilms = window.BondData.films.filter(function(film) {            
             return (
               (this.state.currentTitle === "" || film.title.toLowerCase().indexOf(this.state.currentTitle.toLowerCase()) !== -1) &&
