@@ -11,20 +11,24 @@ h2 {
     color: #F2F7F7;
 }
 
+.pull-right {
+    float: right;
+    text-align: right;
+}
+
+/* general filter */
 .filter {
     background-color: #ccc;
-    padding: 10px;
+    padding: 10px 0;
     overflow: hidden;
     margin-bottom: 15px;
     margin-top: 15px;
-}
-.filter .group {
-    float: left;
-    margin-right: 15px;
+    display: flex;
+    flex-wrap: wrap;
 }
 .filter .group label {
     color: #000;
-    margin-right: 10px;
+    margin-right: 5px;
 }
 .filter .group input.reset {
     color: #000;

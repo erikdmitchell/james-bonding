@@ -92,12 +92,12 @@ function FilmFilters(props) {
     
     return (
         <form action="" className="filter" id="film-filters">
-            <div className="group">
+            <Col xs={12} sm={6} md={3} className="group">
 				<label htmlFor="film-title">Title:</label>
 				<input type="text" name="film_title" value="" placeholder="Film Title" id="film-title" value={props.currentTitle} onChange={updateTitle} />
-			</div>
+			</Col>
 			
-			<div className="group">
+			<Col xs={12} sm={6} md={3} className="group">
 				<label htmlFor="film-actor">Actor:</label>
 				<select name="film_actor" id="film-actor" value={props.currentActor} onChange={updateActor}>
 				    <option value="">- Select -</option>
@@ -109,9 +109,9 @@ function FilmFilters(props) {
     				    );
 				    })}
 				</select>
-			</div>
+			</Col>
 			
-			<div className="group">
+			<Col xs={12} sm={6} md={3} className="group">
 				<label htmlFor="film-director">Director:</label>
 				<select name="film_director" id="film-director" value={props.currentDirector} onChange={updateDirector}>
 				    <option value="">- Select -</option>
@@ -123,9 +123,9 @@ function FilmFilters(props) {
     				    );
 				    })}
 				</select>
-			</div>
+			</Col>
 
-			<div className="group">
+			<Col xs={12} sm={6} md={3} className="group">
 				<label htmlFor="film-villan">Villan:</label>
 				<select name="film_villan" id="film-villan" value={props.currentVillan} onChange={updateVillan}>
 				    <option value="">- Select -</option>
@@ -137,11 +137,11 @@ function FilmFilters(props) {
     				    );
 				    })}
 				</select>
-			</div>
+			</Col>
 			
-			<div className="group">
+			<Col xs={12} className="group pull-right">
 				<input type="reset" className="reset" value="Reset" onClick={resetFilters} />
-			</div>
+			</Col>
         </form>            
     );
 }
