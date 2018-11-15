@@ -39,7 +39,7 @@ class Film extends Component {
     
     render() {
         return (
-            <Col xs={12} md={3} className="film" onMouseEnter={this.mouseOver} onMouseLeave={this.mouseOut}>
+            <Col xs={12} sm={6} md={3} className="film" onMouseEnter={this.mouseOver} onMouseLeave={this.mouseOut}>
                 <img src={this.state.poster} alt={this.state.title} />
                 {this.state.hover ? (<FilmDetails film={this.state.film} />) : null}
             </Col>
