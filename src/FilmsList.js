@@ -165,31 +165,24 @@ class FilmsList extends Component {
         this.setState(obj, this.updateFilmList);
     }
     
+    filterDataKeys(data, current, returnVar) {
+        for (var i=0; i < data.length; i++) {           
+            if (current === data[i].key) {
+                return data[i][returnVar];
+            }           
+        }
+        
+        return '';
+    }
+    
     updateFilmList() {
         var actor = '',
         director = '',
         villanFilms = '';
         
-        for (var i=0; i < window.BondData.actors.length; i++) {
-            if (this.state.currentActor === window.BondData.actors[i].key) {
-                actor = window.BondData.actors[i].display;
-                break;
-            }           
-        }       
-
-        for (var d=0; d < window.BondData.directors.length; d++) {
-            if (this.state.currentDirector === window.BondData.directors[d].key) {
-                director = window.BondData.directors[d].display;
-                break;
-            }           
-        } 
-
-        for (var v=0; v<window.BondData.villans.length; v++) {
-            if (this.state.currentVillan === window.BondData.villans[v].key) {
-                villanFilms = window.BondData.villans[v].films; 
-                break;
-            }
-        }
+        actor = this.filterDataKeys(window.BondData.actors, this.state.currentActor, 'display');       
+        director = this.filterDataKeys(window.BondData.directors, this.state.currentDirector, 'display');       
+        villanFilms = this.filterDataKeys(window.BondData.villans, this.state.currentVillan, 'films');
 
         var filteredFilms = window.BondData.films.filter(function(film) {            
             return (
