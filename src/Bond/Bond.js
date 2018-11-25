@@ -14,9 +14,11 @@ class Bond extends Component {
             <h1>James Bonding</h1>
         </Row>
         <Row>
-
+            <h2>Films</h2>
+            <FilmsList />
         </Row>
         <Row>
+            <h2>Villans</h2>
             <Villans />
         </Row>
       </Grid>
