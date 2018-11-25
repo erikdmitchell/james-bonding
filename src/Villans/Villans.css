@@ -1,0 +1,32 @@
+.villans {
+    display: flex;
+    flex-wrap: wrap;
+}
+.villans .villan {
+    margin-bottom: 15px;
+    position: relative;
+}
+.villans .villan img {
+    max-width: 100%;
+    height: auto;
+}
+
+.villans .villan .villan-details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+}
+
+.villans .villan .villan-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.villans .villan .villan-details .villan-details-inner .villan-title h3 {
+    font-size: 22px;
+}
