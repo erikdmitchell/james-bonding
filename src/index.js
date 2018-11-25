@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Bond from './Bond';
+import Bond from './Bond/Bond';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<Bond />, document.getElementById('root'));
