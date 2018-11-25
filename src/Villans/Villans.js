@@ -8,7 +8,7 @@ function VillansList(props) {
         <Row className="villans-list">
             {props.villans.map(function(villan) {
                 return (
-                    <Villan key={villan.id} villan={villan} />   
+                    <Villan key={villan.id} villan={villan} films={props.films} />   
                 )
             })}
         </Row>  
@@ -46,15 +46,37 @@ class Villan extends Component {
     }
 }
 
-function VillanDetails(props) { 
-    return (
-        <Col xs={12} className="villan-details">
-            <div className="villan-details-inner">
-                <div className="villan-name"><h3>{props.villan.display}</h3></div>
-                <div className="villan-films">Films: {props.villan.films}</div>
-            </div>
-        </Col>    
-    );
+class VillanDetails extends Component {
+    constructor(props) {
+        super(props);
+               
+        // gets films villan is in, then gets just (map) the film title.
+        var Films = window.BondData.films.filter(function(film) {            
+            return (
+              (props.villan.films.indexOf(film.id) !== -1)
+            );
+        }).map(function(film) {
+            return (film.title);
+        });
+        
+        Films = Films.join(', ');
+                      
+        this.state = {
+            villan: props.villan,
+            films: Films
+        };
+    }
+    
+    render() {
+        return (
+            <Col xs={12} className="villan-details">
+                <div className="villan-details-inner">
+                    <div className="villan-name"><h3>{this.state.villan.display}</h3></div>
+                    <div className="villan-films">Films: {this.state.films}</div>
+                </div>
+            </Col>  
+        );
+    }
 }
 
 class Villans extends Component {
@@ -62,7 +84,7 @@ class Villans extends Component {
         super(props);
         
         this.state = {
-            villans: window.BondData.villans,
+            villans: window.BondData.villans
         };
         
         this.updateFormState = this.updateFormState.bind(this);
