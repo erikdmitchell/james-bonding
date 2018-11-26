@@ -79,24 +79,74 @@ class VillanDetails extends Component {
     }
 }
 
+function VillanFilters(props) {
+    function updateVillan(evt) {
+        props.updateFormState({currentVillan: evt.target.value});            
+    } 
+
+    function resetFilters(evt) {
+        props.updateFormState({
+            currentVillan: '' 
+        });          
+    }  
+    
+    return (
+        <form action="" className="filter" id="villan-filters">
+            <Col xs={12} sm={6} md={3} className="group">
+				<label htmlFor="villan-name">Villan:</label>
+				<input type="text" name="villan_name" value="" placeholder="Villan Name" id="villan-name" value={props.currentVillan} onChange={updateVillan} />
+			</Col>
+			
+			<Col xs={12} className="group pull-right">
+				<input type="reset" className="reset" value="Reset" onClick={resetFilters} />
+			</Col>
+        </form>            
+    );
+}
+
 class Villans extends Component {
     constructor(props) {
         super(props);
         
         this.state = {
-            villans: window.BondData.villans
+            villans: window.BondData.villans,
+            currentVillan: ''            
         };
         
         this.updateFormState = this.updateFormState.bind(this);
     }    
 
     updateFormState(obj) {
-        //this.setState(obj, this.updateFilmList);
+        this.setState(obj, this.updateVillanList);
     }
+    // work on this.
+    updateVillanList() {
+        var actor = '',
+        director = '',
+        villanFilms = '';
+        
+        actor = this.filterDataKeys(window.BondData.actors, this.state.currentActor, 'display');       
+        director = this.filterDataKeys(window.BondData.directors, this.state.currentDirector, 'display');       
+        villanFilms = this.filterDataKeys(window.BondData.villans, this.state.currentVillan, 'films');
+
+        var filteredFilms = window.BondData.films.filter(function(film) {            
+            return (
+              (this.state.currentTitle === "" || film.title.toLowerCase().indexOf(this.state.currentTitle.toLowerCase()) !== -1) &&
+              (this.state.currentActor === "" || film.actor === actor) &&
+              (this.state.currentDirector === "" || film.director === director) &&
+              (this.state.currentVillan === "" || villanFilms.indexOf(film.id) !== -1)
+            );
+        }.bind(this));
+    
+        this.setState({
+          films: filteredFilms
+        });        
+    }    
 
     render() {
         return (
             <div className="villans">
+                <VillanFilters currentVillan={this.state.currentVillan} />
                 <VillansList villans={this.state.villans} />
             </div>
         );
