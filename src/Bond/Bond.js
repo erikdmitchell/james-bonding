@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
-import '../assets/bond-data.js';
 import './Bond.css';
+import Col from 'react-bootstrap/lib/Col';
 
 class Bond extends Component {
   render() {
     return (
-        <div>
-            Bond
-        </div>
+        <Col xs={12}>
+            <h2>API</h2>
+            Coming Soon
+        </Col>
     );
   }
 }
