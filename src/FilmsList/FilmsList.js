@@ -103,7 +103,7 @@ function FilmFilters(props) {
 				    <option value="">- Select -</option>
 				    {actors.map(function(actor) {
     				    return (
-        				    <option value={actor.key} key={actor.key}>
+        				    <option value={actor.id} key={actor.id}>
         				        {actor.display}
         				    </option>
     				    );
@@ -117,7 +117,7 @@ function FilmFilters(props) {
 				    <option value="">- Select -</option>
 				    {directors.map(function(director) {
     				    return (
-        				    <option value={director.key} key={director.key}>
+        				    <option value={director.id} key={director.id}>
         				        {director.display}
         				    </option>
     				    );
@@ -167,7 +167,7 @@ class FilmsList extends Component {
     
     filterDataKeys(data, current, returnVar) {
         for (var i=0; i < data.length; i++) {           
-            if (current === data[i].key) {
+            if (current === data[i].id) {
                 return data[i][returnVar];
             }           
         }
