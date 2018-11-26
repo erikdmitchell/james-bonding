@@ -295,17 +295,11 @@ window.BondData = {
             'films': ['bf2', 'bf4', 'bf5', 'bf6', 'bf7', 'bf24'],
             'image': 'https://upload.wikimedia.org/wikipedia/en/c/c3/Blofeldpleasance67.jpg',            
             'id': 'blofed'
-        },                 
-        {
-            'display': 'Dr. Kananga',
-            'films': ['bf8'],
-            'image': '',            
-            'id': 'kananga'
         },
         {
-            'display': 'Mr. Big',
+            'display': 'Mr. Big / Dr. Kananga',
             'films': ['bf8'],
-            'image': '',            
+            'image': 'https://vignette.wikia.nocookie.net/jamesbond/images/4/4c/Dr._Kananga_%28Yaphet_Kotto%29_-_Profile.jpg',            
             'id': 'big'
         },        
         {
@@ -317,7 +311,7 @@ window.BondData = {
         {
             'display': 'Karl Stromberg',
             'films': ['bf10'],
-            'image': '',            
+            'image': 'https://vignette.wikia.nocookie.net/jamesbond/images/a/ab/Karl_Stromberg_-_Profile.png',            
             'id': 'stromberg'
         },
         {
@@ -329,31 +323,31 @@ window.BondData = {
         {
             'display': 'Aristotle Kristatos',
             'films': ['bf12'],
-            'image': '',            
+            'image': 'http://image.wikifoundry.com/image/3/2ee1980084059cbdb79a78ec944057b3/GW311H354',            
             'id': 'kristatos'
         },
         {
             'display': 'General Orlov',
             'films': ['bf13'],
-            'image': '',            
+            'image': 'https://vignette.wikia.nocookie.net/jamesbond/images/1/16/General_Orlov_-_Profile.png',            
             'id': 'orlov'
         },
         {
             'display': 'Prince Kamal Khan',
             'films': ['bf13'],
-            'image': '',            
+            'image': 'https://vignette.wikia.nocookie.net/jamesbond/images/2/26/Kamal_Khan_%28Louis_Jourdan%29_-_Profile.jpg',            
             'id': 'khan'
         },
         {
             'display': 'Max Zorin',
             'films': ['bf14'],
-            'image': '',            
+            'image': 'https://vignette.wikia.nocookie.net/jamesbond/images/b/bb/Max_Zorin_-_Profile.png',            
             'id': 'zorin'
         },
         {
             'display': 'General Georgi Koskov',
             'films': ['bf15'],
-            'image': '',            
+            'image': 'http://image.wikifoundry.com/image/3/9aecbc4286d2cdfbd5d11b02ff0813bc/GW388H281',            
             'id': 'koskov'
         },                                
         {
