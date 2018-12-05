@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Row from 'react-bootstrap/lib/Row';
-import Col from 'react-bootstrap/lib/Col';
+//import Row from 'react-bootstrap/lib/Row';
+//import Col from 'react-bootstrap/lib/Col';
 import './RandomMovie.css';
 
 /*
@@ -29,7 +29,7 @@ class Spinner extends Component {
     }  
     
     spin() {
-        SpinWheel(this.state.films);
+        SpinMovies(this.state.films);
     }   
     
     render() {
@@ -47,91 +47,46 @@ function Wheel(props) {
     
     return (
         <div id="film-wheel">
-            <div id="inner-wheel">
+            <ul className="film-list" id="film-list">
                 {props.films.map(function(film) {
                     filmCounter++;
                     return (
-                        <div className="film" id={filmCounter} key={film.id}><span>{film.title}</span></div>   
+                        <li className="film" id={filmCounter} key={film.id}><span>{film.title}</span></li>   
                     )
                 })}
-            </div>       
+            </ul>       
         </div>
     )
 }
 
-/*
-function FilmDetails(props) { 
-    return (
-        <Col xs={12} className="film-details">
-            <div className="film-details-inner">
-                <div className="film-title"><h3>{props.film.title}</h3></div>
-                <div className="film-year">Year: {props.film.year}</div>
-                <div className="film-actor">Actor: {props.film.actor}</div>  
-                <div className="film-director">Director: {props.film.director}</div>
-            </div>
-        </Col>    
-    );
-}
-*/
-
-function SpinWheel(films) {  
+function SpinMovies(films) {  
     // set vars
     var totalFilms = films.length;
     
     // get random number
     var filmNumber = Math.floor(Math.random() * totalFilms + 1 );
-    
-    var filmCounter = 0;
-    
-    var delay = 1000;
-    
-    for (var f=0; f < totalFilms; f++) { 
-        var prevID = filmCounter;
-        var id = filmCounter++;
-                
-        UpdateClassLoop(id, prevID);
-        
-        if (filmNumber === filmCounter) { 
-            console.log('stop');
-            break;
-        }         
-    }
-    
-console.log(filmNumber);
-    
-/*
-    for (var f=0; f < totalFilms; f++) {  
-        var prevID = filmCounter;
-        var id = filmCounter++;
-        
-        if (prevID != 0) {
-            document.getElementById(prevID).classList.remove('active');
-        }
-            
-        document.getElementById(filmCounter).classList.add('active');
-                 
-        if (filmNumber === filmCounter) { 
-            
-console.log('stop');
-            break;
-        }           
-    }
-*/    
-    
+
+    // scroll our list.
+    scrollMoviesUL(filmNumber);         
 }
 
-function UpdateClassLoop(id, prevID) {
-    setTimeout(function() {
-console.log(id + ' | ' + prevID);
-        
-        if (prevID != 0) {
-            document.getElementById(prevID).classList.remove('active');
-        }
-            
-        document.getElementById(id).classList.add('active');
-    }, 1000)
+function scrollMoviesUL(id) {
+    var li = document.getElementById(id);
+    var ul = li.parentNode;
+    var listItem = ul.getElementsByTagName('li');
+
+    // removes any existing active class.
+    for (var i = 0; i < listItem.length; i++) {
+        listItem[i].classList.remove('active');
+    }
+
+    // scroll into our view.
+    li.scrollIntoView({  
+        behavior: 'smooth' 
+    });
+    li.classList.add('active'); // add class.
 }
-	
+
 class RandomMovie extends Component {
     constructor(props) {
         super(props);
