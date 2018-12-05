@@ -9,7 +9,13 @@
 }
 .film-list .film img {
     width: 100%;
+    -webkit-filter: blur(5px); /* Safari 6.0 - 9.0 */
+    filter: blur(5px);    
 }
 .film-list .film.active {
     border: 5px solid #e95420;
+}
+.film-list .film.active img {
+    -webkit-filter: blur(0px); /* Safari 6.0 - 9.0 */
+    filter: blur(0px);
 }
