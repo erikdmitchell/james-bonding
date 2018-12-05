@@ -3,20 +3,6 @@ import React, { Component } from 'react';
 //import Col from 'react-bootstrap/lib/Col';
 import './RandomMovie.css';
 
-/*
-function Films(props) {    
-    return (        
-        <Row className="films">
-            {props.films.map(function(film) {
-                return (
-                    <Film key={film.id} film={film} />   
-                )
-            })}
-        </Row>  
-    );
-}
-*/
-
 class Spinner extends Component {
     constructor(props) {
         super(props);
@@ -50,8 +36,10 @@ function Wheel(props) {
             <ul className="film-list" id="film-list">
                 {props.films.map(function(film) {
                     filmCounter++;
+                    var id = "film-" + filmCounter;
+                    
                     return (
-                        <li className="film" id={filmCounter} key={film.id}><span>{film.title}</span></li>   
+                        <li className="film" id={id} key={film.id}><span>{film.title}</span></li>   
                     )
                 })}
             </ul>       
@@ -70,7 +58,8 @@ function SpinMovies(films) {
     scrollMoviesUL(filmNumber);         
 }
 
-function scrollMoviesUL(id) {
+function scrollMoviesUL(liNumber) {
+    var id = "film-" + liNumber;
     var li = document.getElementById(id);
     var ul = li.parentNode;
     var listItem = ul.getElementsByTagName('li');
