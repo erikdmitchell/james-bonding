@@ -9,6 +9,7 @@ import Header from '../Header/Header';
 import Bond from '../Bond/Bond';
 import FilmsList from '../FilmsList/FilmsList';
 import Villans from '../Villans/Villans';
+import RandomMovie from '../RandomMovie/RandomMovie';
 
 class Main extends Component {
     render() {
@@ -18,6 +19,7 @@ class Main extends Component {
                 <Grid className="content">
                     <Row>
                         <Route exact path="/" component={Bond} />
+                        <Route path="/movie" component={RandomMovie} />
                         <Route path="/films" component={FilmsList} />
                         <Route path="/villans" component={Villans} />
                     </Row>
