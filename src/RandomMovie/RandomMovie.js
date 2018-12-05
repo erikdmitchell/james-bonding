@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-//import Row from 'react-bootstrap/lib/Row';
-//import Col from 'react-bootstrap/lib/Col';
+import Row from 'react-bootstrap/lib/Row';
+import Col from 'react-bootstrap/lib/Col';
 import './RandomMovie.css';
 
 class Spinner extends Component {
@@ -20,10 +20,18 @@ class Spinner extends Component {
     
     render() {
         return (
-            <div>
-                <button onClick={this.spin} className="pull-right">Spinner</button>
-                <Wheel films={this.state.films} />
-            </div>
+            <Col xs={12} sm={4} smOffset={4}>
+                <Row>
+                    <Col xs={12}>
+                        <button onClick={this.spin} className="spin-button pull-right">Spin</button>
+                    </Col>
+                </Row>
+                <Row>
+                    <Col xs={12}>
+                        <Wheel films={this.state.films} />
+                    </Col>
+                </Row>
+            </Col>
         );
     }
 }

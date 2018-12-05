@@ -19,3 +19,6 @@
     -webkit-filter: blur(0px); /* Safari 6.0 - 9.0 */
     filter: blur(0px);
 }
+.spin-button {
+    margin-bottom: 15px;
+}
