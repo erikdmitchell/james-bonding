@@ -23,6 +23,13 @@ h2 {
     text-align: right;
 }
 
+/* buttons */
+button {
+    color: #e95420;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
 /* general filter */
 .filter {
     background-color: #ccc;
