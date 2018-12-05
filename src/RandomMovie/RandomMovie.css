@@ -2,10 +2,14 @@
     list-style-type: none;
     margin: 0;  
     border: 1px solid #fff;
-    padding: 5px; 
-    height: 120px;
-    overflow: scroll; 
+    padding: 0; 
+    height: 835px;
+    overflow: scroll;
+    width: 362px; 
+}
+.film-list .film img {
+    width: 100%;
 }
 .film-list .film.active {
-    color: yellow;
+    border: 5px solid #e95420;
 }

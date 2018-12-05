@@ -21,7 +21,7 @@ class Spinner extends Component {
     render() {
         return (
             <div>
-                <button onClick={this.spin}>Spinner</button>
+                <button onClick={this.spin} className="pull-right">Spinner</button>
                 <Wheel films={this.state.films} />
             </div>
         );
@@ -30,7 +30,7 @@ class Spinner extends Component {
 
 function Wheel(props) {
     var filmCounter = 0;
-    
+
     return (
         <div id="film-wheel">
             <ul className="film-list" id="film-list">
@@ -39,7 +39,7 @@ function Wheel(props) {
                     var id = "film-" + filmCounter;
                     
                     return (
-                        <li className="film" id={id} key={film.id}><span>{film.title}</span></li>   
+                        <li className="film" id={id} key={film.id}><span><img src={film.poster} alt={film.title} /></span></li>   
                     )
                 })}
             </ul>       
@@ -73,6 +73,7 @@ function scrollMoviesUL(liNumber) {
     li.scrollIntoView({  
         behavior: 'smooth' 
     });
+    
     li.classList.add('active'); // add class.
 }
 
