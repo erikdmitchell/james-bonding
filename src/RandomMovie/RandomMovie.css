@@ -1,3 +1,11 @@
-#film-wheel .film.active {
+.film-list {
+    list-style-type: none;
+    margin: 0;  
+    border: 1px solid #fff;
+    padding: 5px; 
+    height: 120px;
+    overflow: scroll; 
+}
+.film-list .film.active {
     color: yellow;
 }
